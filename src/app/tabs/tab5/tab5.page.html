@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab5</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let it of valoresLista">
+    <ion-item [href]="'https://' + it.url">
+      <ion-img [src]="'assets/img/' + it.imagen" class="ion-padding"></ion-img>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

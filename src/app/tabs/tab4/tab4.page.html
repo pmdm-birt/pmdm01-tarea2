@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label>Adivina un número del 0 al 100</ion-label>
+    <ion-button (click)="onClick()">Comprobar</ion-button>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Número: </ion-label>
+    <ion-input type="number" placeholder="Introduce un número" [(ngModel)]="numero"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{mensaje}}</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
