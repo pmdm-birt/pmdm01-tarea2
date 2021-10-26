@@ -8,14 +8,15 @@
 <ion-list>
   <ion-list-header>
     <ion-label>Adivina un número del 0 al 100</ion-label>
-    <ion-button (click)="onClick()">Comprobar</ion-button>
+    <ion-button disabled={{desactivado}} (click)="onClick()">Comprobar</ion-button>
   </ion-list-header>
   <ion-item>
     <ion-label>Número: </ion-label>
-    <ion-input type="number" placeholder="Introduce un número" [(ngModel)]="numero"></ion-input>
+    <ion-input type="number" placeholder="Introduce un número" [(ngModel)]="numero" (ionChange)="comprobarDato();"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>{{mensaje}}</ion-label>
+    <ion-badge color="primary" mode="ios">{{intentos}}</ion-badge>
   </ion-item>
 </ion-list>
 </ion-content>

@@ -7,7 +7,7 @@
 <ion-content>
 
   <ion-list *ngFor="let it of valoresLista">
-    <ion-item [href]="'https://' + it.url">
+    <ion-item [href]="'https://' + it.url" target="_blank">
       <ion-img [src]="'assets/img/' + it.imagen" class="ion-padding"></ion-img>
     </ion-item>
   </ion-list>
