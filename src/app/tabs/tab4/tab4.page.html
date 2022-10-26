@@ -8,14 +8,19 @@
 <ion-list>
   <ion-list-header>
     <ion-label>Adivina un número del 0 al 100</ion-label>
+    
+    <!-- Si el número no está entre 0 y 100 el botón está desactivado -->
     <ion-button disabled={{desactivado}} (click)="onClick()">Comprobar</ion-button>
   </ion-list-header>
   <ion-item>
     <ion-label>Número: </ion-label>
     <ion-input type="number" placeholder="Introduce un número" [(ngModel)]="numero" (ionChange)="comprobarDato();"></ion-input>
   </ion-item>
+
+  <!-- Con *ngIf se muestra el mensaje en rojo o en verde, según se ha adivinado el número o no -->
   <ion-item>
-    <ion-label>{{mensaje}}</ion-label>
+    <ion-label *ngIf="!acierto" color="danger">{{mensaje}}</ion-label>
+    <ion-label *ngIf="acierto" color="success">{{mensaje}}</ion-label>
     <ion-badge color="primary" mode="ios">{{intentos}}</ion-badge>
   </ion-item>
 </ion-list>

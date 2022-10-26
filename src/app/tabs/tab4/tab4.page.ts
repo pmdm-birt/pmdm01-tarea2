@@ -16,6 +16,7 @@ export class Tab4Page implements OnInit {
 
   constructor() { }
 
+  // Controla los mensajes y el número de intentos
   onClick() {
     this.intentos++;
     if (this.numero == this.adivina) {
@@ -33,8 +34,9 @@ export class Tab4Page implements OnInit {
 
   }
 
+  // Controla si el número introducido es válido
   comprobarDato() {
-    if (this.numero >= 100 || this.numero <= 0) {
+    if (this.numero > 100 || this.numero < 0) {
       console.log("Introduce un número entre 0 y 100");
       this.mensaje = "Introduce un número entre 0 y 100";
       this.desactivado = true;
@@ -45,12 +47,13 @@ export class Tab4Page implements OnInit {
     }
   }
 
+  // Genera un número del 0 al 100
   nuevoNumero() {
-    // Genera un número del 0 al 100
     this.adivina = Math.floor(Math.random() * 101);
     console.log(this.adivina);
   }
 
+  // Genera el primer número a adivinar
   ngOnInit() {
     this.nuevoNumero();
   }

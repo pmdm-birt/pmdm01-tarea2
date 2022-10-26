@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// Estructura de datos que se va a utilizar
 interface IValor {
   imagen: string;
   url: string;
@@ -12,6 +13,7 @@ interface IValor {
 })
 export class Tab5Page implements OnInit {
 
+    // Array de datos que se va a utilizar
     valoresLista: IValor[] = [
       {
         imagen: "BIRT_LOGO.png",

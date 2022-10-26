@@ -6,9 +6,14 @@
 
 <ion-content>
 
+  <!-- 
+    Con *ngFor se recorre el array y se genera el enlace a la URL y se muestra la imagen 
+    Se añade el texto necesario en cada caso para que la ruta sea correcta
+    Se usa target blank para que se abra en otra ventana
+  -->
   <ion-list *ngFor="let it of valoresLista">
     <ion-item [href]="'https://' + it.url" target="_blank">
-      <ion-img [src]="'assets/img/' + it.imagen" class="ion-padding"></ion-img>
+      <ion-img src="assets/img/{{it.imagen}}" class="ion-padding"></ion-img>
     </ion-item>
   </ion-list>
 
